@@ -1,0 +1,37 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Päiväkoti Omenapuu
+email: omenapuu.web@gmail.com
+description: >- # this means to ignore newlines until next key
+  Päiväkoti Omenapuu on pieni, kodinomainen ja lämminhenkinen
+  vanhenpainyhdistyksen ylläpitämä päiväkoti, joka sijaitsee luonnonkauniissa ympäristössä
+  Mäntsälän Mäntymäentiellä.
+domain: paivakotiomenapuu.github.io
+url: https://paivakotiomenapuu.github.io
+baseurl: ""
+
+# Variables
+sections:
+  - name: Omppu
+    link: "#about"
+  - name: Arvot
+    link: "#values"
+  - name: Ryhmät
+    link: "#groups"
+  - name: Yhteystiedot
+    link: "#contact"
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-minifier
+  - jekyll-webp
+
+# WebP Generator Plugin
+webp:
+  enabled: true
+  img_dir: ["/assets/img"]
