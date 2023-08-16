@@ -38,10 +38,5 @@ values:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-minifier
-  - jekyll-webp
+  - jekyll-include-cache
 
-# WebP Generator Plugin
-webp:
-  enabled: true
-  img_dir: ["/assets/img"]
