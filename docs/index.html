@@ -55,34 +55,15 @@ layout: default
     <h2 class="text-center text-white mt-0">{{ site.sections[1].name }}</h2>
     <hr class="divider divider-light" />
     <div class="row gx-4 gx-lg-5">
+      {% for value in site.values %}
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
-          <div class="mb-2"><i class="bi-award fs-1 text-white"></i></div>
-          <h3 class="h4 text-white mb-2">Sturdy Themes</h3>
-          <p class="text-white-50 mb-0">Our themes are updated regularly to keep them bug free!</p>
+          <div class="mb-2"><i class="{{ value.icon }} fs-1 text-white"></i></div>
+          <h3 class="h4 text-white mb-2">{{ value.title }}</h3>
+          <p class="text-white-75 mb-0">{{ value.description }}</p>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <div class="mb-2"><i class="bi-joystick fs-1 text-white"></i></div>
-          <h3 class="h4 text-white mb-2">Up to Date</h3>
-          <p class="text-white-50 mb-0">All dependencies are kept current to keep things fresh.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <div class="mb-2"><i class="bi-globe-americas fs-1 text-white"></i></div>
-          <h3 class="h4 text-white mb-2">Ready to Publish</h3>
-          <p class="text-white-50 mb-0">You can use this design as is, or you can make changes!</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <div class="mb-2"><i class="bi-heart fs-1 text-white"></i></div>
-          <h3 class="h4 text-white mb-2">Made with Love</h3>
-          <p class="text-white-50 mb-0">Is it really open source if it's not made with love?</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -91,7 +72,11 @@ layout: default
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-lg-6 no-padding overlay-container">
-        <img src="./assets/img/tulitassut.jpg" class="group-image" alt="Tulitassut">
+        <picture>
+          <source srcset="./assets/img/tulitassut.webp" class="group-image" type="image/webp">
+          <source srcset="./assets/img/tulitassut.jpg" class="group-image" type="image/jpeg">
+          <img src="./assets/img/tulitassut.jpg" class="group-image" alt="Tulitassut">
+        </picture>
         <div class="overlay"></div>
       </div>
       <div class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center group-text">
@@ -130,7 +115,11 @@ layout: default
         </p>
       </div>
       <div class="col-sm-12 col-lg-6 no-padding overlay-container">
-        <img src="./assets/img/kultakaislat.jpg" class="group-image" alt="Kultakaislat">
+        <picture>
+          <source srcset="./assets/img/kultakaislat.webp" class="group-image" type="image/webp">
+          <source srcset="./assets/img/kultakaislat.jpg" class="group-image" type="image/jpeg">
+          <img src="./assets/img/kultakaislat.jpg" class="group-image" alt="Kultakaislat">
+        </picture>
         <div class="overlay"></div>
       </div>
     </div>

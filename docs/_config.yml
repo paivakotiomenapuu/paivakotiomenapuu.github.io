@@ -1,11 +1,7 @@
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Päiväkoti Omenapuu
 email: omenapuu.web@gmail.com
-description: >- # this means to ignore newlines until next key
+description: >-
   Päiväkoti Omenapuu on pieni, kodinomainen ja lämminhenkinen
   vanhenpainyhdistyksen ylläpitämä päiväkoti, joka sijaitsee luonnonkauniissa ympäristössä
   Mäntsälän Mäntymäentiellä.
@@ -23,6 +19,20 @@ sections:
     link: "#groups"
   - name: Yhteystiedot
     link: "#contact"
+
+values:
+  - icon: bi-award
+    title: Lorep ipsum
+    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+  - icon: bi-joystick
+    title: Lorep ipsum
+    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+  - icon: bi-globe-americas
+    title: Lorep ipsum
+    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+  - icon: bi-heart
+    title: Lorep ipsum
+    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
 
 # Build settings
 plugins:
