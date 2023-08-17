@@ -22,16 +22,16 @@ sections:
 
 values:
   - icon: bi-award
-    title: Lorep ipsum
+    title: Lorem ipsum
     description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
   - icon: bi-joystick
-    title: Lorep ipsum
+    title: LoLoremrep ipsum
     description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
   - icon: bi-globe-americas
-    title: Lorep ipsum
+    title: Lorem ipsum
     description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
   - icon: bi-heart
-    title: Lorep ipsum
+    title: Lorem ipsum
     description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
 
 # Build settings
