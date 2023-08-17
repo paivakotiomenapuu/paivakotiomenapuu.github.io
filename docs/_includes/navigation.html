@@ -6,8 +6,8 @@
       aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto my-2 my-lg-0">
-        {% for section in site.sections %}
-        <li class="nav-item"><a class="nav-link" href={{ section.link }}>{{ section.name }}</a></li>
+        {% for section in site.data.sections %}
+        <li class="nav-item"><a class="nav-link" href={{ section.link }}>{{ section.title }}</a></li>
         {% endfor %}
       </ul>
     </div>

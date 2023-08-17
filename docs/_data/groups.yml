@@ -1,0 +1,25 @@
+# Groups section information.
+# Make sure that there's an image in assets/img folder that match the imageName.
+# It's good practise to add jpg and webp images for best performance.
+- name: Tulitassut (1-3v)
+  imageName: tulitassut
+  imageFirstOnDesktop: true
+  description:
+    - >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec turpis quis quam sagittis lobortis ac in
+      quam. Phasellus risus arcu, ultrices vitae sem eget, pellentesque accumsan est.
+    - >-
+      Sed ultrices eros ante, vel auctor sapien venenatis in. Praesent nec venenatis elit, ut fermentum magna.
+      Phasellus nec enim vel libero vehicula cursus.
+    - Sed hendrerit, nibh ac varius commodo, tellus enim tincidunt diam, ut blandit augue turpis in dolor.
+- name: Kultakaislat (4-6v)
+  imageName: kultakaislat
+  imageFirstOnDesktop: false
+  description:
+    - >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec turpis quis quam sagittis lobortis ac in
+      quam. Phasellus risus arcu, ultrices vitae sem eget, pellentesque accumsan est.
+    - >-
+      Sed ultrices eros ante, vel auctor sapien venenatis in. Praesent nec venenatis elit, ut fermentum magna.
+      Phasellus nec enim vel libero vehicula cursus.
+    - Sed hendrerit, nibh ac varius commodo, tellus enim tincidunt diam, ut blandit augue turpis in dolor.

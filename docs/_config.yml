@@ -1,6 +1,11 @@
+# Build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
+
 # Site settings
 title: Päiväkoti Omenapuu
-email: omenapuu.web@gmail.com
 description: >-
   Päiväkoti Omenapuu on pieni, kodinomainen ja lämminhenkinen
   vanhenpainyhdistyksen ylläpitämä päiväkoti, joka sijaitsee luonnonkauniissa ympäristössä
@@ -8,35 +13,3 @@ description: >-
 domain: paivakotiomenapuu.github.io
 url: https://paivakotiomenapuu.github.io
 baseurl: ""
-
-# Variables
-sections:
-  - name: Omppu
-    link: "#about"
-  - name: Arvot
-    link: "#values"
-  - name: Ryhmät
-    link: "#groups"
-  - name: Yhteystiedot
-    link: "#contact"
-
-values:
-  - icon: bi-award
-    title: Lorem ipsum
-    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
-  - icon: bi-joystick
-    title: LoLoremrep ipsum
-    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
-  - icon: bi-globe-americas
-    title: Lorem ipsum
-    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
-  - icon: bi-heart
-    title: Lorem ipsum
-    description: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
-
-# Build settings
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-include-cache
-

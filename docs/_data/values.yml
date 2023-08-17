@@ -1,0 +1,14 @@
+# Values section information. Icons are Bootstrap icons v1.10.5
+# https://icons.getbootstrap.com/
+- icon: bi-award
+  title: Lorem ipsum
+  text: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+- icon: bi-joystick
+  title: Lorem ipsum
+  text: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+- icon: bi-globe-americas
+  title: Lorem ipsum
+  text: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.
+- icon: bi-heart
+  title: Lorem ipsum
+  text: Maecenas tincidunt egestas lacus, sed viverra est eleifend et.

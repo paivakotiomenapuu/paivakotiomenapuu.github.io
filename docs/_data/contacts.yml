@@ -1,0 +1,13 @@
+# Contact section information
+details:
+  - icon: bi-mailbox
+    text: Mäntymäentie 9B, 04600 Mäntsälä
+  - icon: bi-clock
+    text: MA-PE 6:30 - 17:15
+links:
+  - icon: bi-envelope-at
+    type: "mailto:"
+    text: omenapuu.web@gmail.com
+  - icon: bi-phone
+    type: "tel:"
+    text: 0400 977 506

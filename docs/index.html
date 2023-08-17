@@ -2,19 +2,17 @@
 layout: default
 ---
 
-<!-- Masthead-->
+<!-- Landing-->
 <header class="masthead">
   <div class="container px-4 px-lg-5 h-100">
     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
       <div class="col-lg-8 align-self-end">
-        <h1 class="text-white font-weight-bold">Tervetuloa päiväkoti Omenapuuhun</h1>
+        <h1 class="text-white font-weight-bold">{{ site.data.landing.title }}</h1>
         <hr class="divider" />
       </div>
       <div class="col-lg-8 align-self-baseline">
-        <p class="text-white-75 mb-5">Päiväkoti Omenapuu on pieni, kodinomainen ja lämminhenkinen
-          vanhenpainyhdistyksen ylläpitämä päiväkoti, joka sijaitsee luonnonkauniissa ympäristössä
-          Mäntsälän Mäntymäentiellä.</p>
-        <a class="btn btn-primary btn-xl" href="#about">Hae hoitopaikkaa</a>
+        <p class="text-white-75 mb-5">{{ site.data.landing.description }}</p>
+        <a class="btn btn-primary btn-xl" href="#about">{{ site.data.landing.button }}</a>
       </div>
     </div>
   </div>
@@ -24,27 +22,11 @@ layout: default
   <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-lg-8 text-center">
-        <h2 class="mt-0">{{ site.sections[0].name }}</h2>
+        <h2 class="mt-0">{{ site.data.sections[0].title }}</h2>
         <hr class="divider" />
-        <p class="mb-4">
-          Olemme Mäntsälän ensimmäinen yksityinen Vanhempainyhdistyksen ylläpitämä
-          päiväkoti, perustettu vuoden 1994 alussa.
-        </p>
-        <p class="mb-4">
-          Omenapuussa on reilu 30 iloista ja touhukasta lasta. Heitä opettaa ja hoitaa ammattitaidolla ja sydämellä
-          varhaiskasvatuksen ammattilaiset.
-        </p>
-        <p class="mb-4">
-          Kodinomaisessa päiväkodissamme on kaksi lapsiryhmää Tulitassut <span class="no-wrap">1-3v</span> ja
-          Kultakaislat <span class="no-wrap">4-6v.</span> Käytössä on varhaiskasvatussuunnitelma (VASU) <span
-            class="no-wrap">1-5</span> vuotiaille ja esiopetuksen
-          oppimissuunnitelma 6 vuotiaille.
-        </p>
-        <p class="mb-4">
-          Lapsen kasvun ja kehityksen erityiseen tukeen teemme yhteistyötä Mäntsälän kunnan
-          antavien palvelujen kanssa mm. konsultoiva varhaiskasvatuksen erityisopettaja (kveo), perheneuvola,
-          hyvinvointineuvola, lapsipsykologi, lastensuojelu, toimintaterapeutit ja puheterapeutit.
-        </p>
+          {% for text in site.data.about %}
+          <p>{{ text }}</p>
+          {% endfor %}
       </div>
     </div>
   </div>
@@ -52,15 +34,15 @@ layout: default
 <!-- Values-->
 <section class="page-section bg-primary" id="values">
   <div class="container px-4 px-lg-5">
-    <h2 class="text-center text-white mt-0">{{ site.sections[1].name }}</h2>
+    <h2 class="text-center text-white mt-0">{{ site.data.sections[1].title }}</h2>
     <hr class="divider divider-light" />
     <div class="row gx-4 gx-lg-5">
-      {% for value in site.values %}
+      {% for value in site.data.values %}
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <div class="mb-2"><i class="{{ value.icon }} fs-1 text-white"></i></div>
           <h3 class="h4 text-white mb-2">{{ value.title }}</h3>
-          <p class="text-white-75 mb-0">{{ value.description }}</p>
+          <p class="text-white-75 mb-0">{{ value.text }}</p>
         </div>
       </div>
       {% endfor %}
@@ -70,81 +52,50 @@ layout: default
 <!-- Groups -->
 <section id="groups">
   <div class="container-fluid">
+    {% for group in site.data.groups %}
     <div class="row">
-      <div class="col-sm-12 col-lg-6 no-padding overlay-container">
-        <picture>
-          <source srcset="assets/img/tulitassut.webp" class="group-image" type="image/webp">
-          <source srcset="assets/img/tulitassut.jpg" class="group-image" type="image/jpeg">
-          <img src="assets/img/tulitassut.jpg" class="group-image" alt="Tulitassut">
-        </picture>
-        <div class="overlay"></div>
-      </div>
-      <div class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center group-text">
-        <h3 class="h4 mb-4">Tulitassut (1-3v)</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec turpis quis quam sagittis lobortis ac in
-          quam. Phasellus risus arcu, ultrices vitae sem eget, pellentesque accumsan est.
-        </p>
-        <p>
-          Sed ultrices eros ante, vel
-          auctor sapien venenatis in. Praesent nec venenatis elit, ut fermentum magna. Phasellus nec enim vel libero
-          vehicula cursus.
-        </p>
-        <p>
-          Sed hendrerit, nibh ac varius commodo, tellus enim tincidunt
-          diam, ut blandit augue turpis in dolor.
-        </p>
-      </div>
+      {% if group.imageFirstOnDesktop %}
+        {% include groupImage.html group=group %}
+        {% include groupInfo.html group=group %}
+      {% else %}
+        {% include groupInfo.html group=group %}
+        {% include groupImage.html group=group %}
+      {% endif %}
     </div>
-    <div class="row">
-      <div
-        class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center order-last order-lg-first group-text">
-        <h3 class="h4 mb-4">Kultakaislat (4-6v)</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec turpis quis quam sagittis lobortis ac in
-          quam. Phasellus risus arcu, ultrices vitae sem eget, pellentesque accumsan est.
-        </p>
-        <p>
-          Sed ultrices eros ante, vel
-          auctor sapien venenatis in. Praesent nec venenatis elit, ut fermentum magna. Phasellus nec enim vel libero
-          vehicula cursus.
-        </p>
-        <p>
-          Sed hendrerit, nibh ac varius commodo, tellus enim tincidunt
-          diam, ut blandit augue turpis in dolor.
-        </p>
-      </div>
-      <div class="col-sm-12 col-lg-6 no-padding overlay-container">
-        <picture>
-          <source srcset="assets/img/kultakaislat.webp" class="group-image" type="image/webp">
-          <source srcset="assets/img/kultakaislat.jpg" class="group-image" type="image/jpeg">
-          <img src="assets/img/kultakaislat.jpg" class="group-image" alt="Kultakaislat">
-        </picture>
-        <div class="overlay"></div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 <!-- Contact-->
 <section class="page-section bg-dark" id="contact">
   <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-lg-8 col-xl-6 text-center">
-        <h2 class="text-white mt-0">{{ site.sections[3].name }}</h2>
+    <div class="row">
+      <div class="col-12 text-center pb-4">
+        <h2 class="text-white mt-0">{{ site.data.sections[3].title }}</h2>
         <hr class="divider divider-light" />
-        <div>
-          <p class="text-white-50 mb-5">Ready to start your next project with us? Send us a messages and we will
-            get back to you as soon as possible!
-          </p>
+      </div>
+    </div>
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-sm-12 col-lg-6 pb-5 pb-lg-0 d-flex justify-content-center">
+        <div class="row flex-column">
+          {% for detail in site.data.contacts.details %}
+          <div class="col d-flex flex-row align-items-center mb-2">
+            <i class="{{ detail.icon }} text-white fs-2"></i>
+            <p class="text-white ms-3 mb-0">{{ detail.text }}</p>
+          </div>
+          {%  endfor %}
+          {% for link in site.data.contacts.links %}
+          <div class="col d-flex flex-row align-items-center mb-2">
+            <i class="{{ link.icon }} text-white fs-2"></i>
+            <a href="{{ link.type }}{{ link.text }}" class="ms-3">{{ link.text }}</a>
+          </div>
+          {%  endfor %}
         </div>
       </div>
-    </div>
-
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-lg-4 text-center mb-5 mb-lg-0">
-        <i class="bi-phone fs-2 mb-3 text-white"></i>
-        <div class="text-white-75">+1 (555) 123-4567</div>
+      <div class="col-sm-12 col-lg-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.0387188984964!2d25.308656331241927!3d60.64280527517377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468e1d6d04396683%3A0x5b586977b13686be!2zTcOkbnR5bcOkZW50aWUgOSwgMDQ2MDAgTcOkbnRzw6Rsw6Q!5e0!3m2!1sen!2sfi!4v1692270026507!5m2!1sen!2sfi"
+          width="100%" height="auto" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </div>
   </div>
 </section>
