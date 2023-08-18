@@ -1,4 +1,6 @@
 # Contact section information
+# Icons are Bootstrap icons v1.10.5
+# https://icons.getbootstrap.com/
 details:
   - icon: bi-mailbox
     text: Mäntymäentie 9B, 04600 Mäntsälä
