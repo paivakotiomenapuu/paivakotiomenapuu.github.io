@@ -11,3 +11,10 @@ links:
   - icon: bi-phone
     type: "tel:"
     text: 0400 977 506
+socials:
+  - icon: bi-facebook
+    link: https://www.facebook.com/people/Päiväkoti-Omenapuu/100054432252403/
+    text: Facebook
+  - icon: bi-instagram
+    link: https://www.instagram.com/pkomenapuu/
+    text: Instagram
