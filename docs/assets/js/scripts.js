@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -50,4 +50,38 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    let form = document.getElementById("application")
+    form.addEventListener("submit", composeMail);
+
+    function composeMail(event) {
+        event.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let birthday = document.getElementById("birthday").value;
+        let startDate = document.getElementById("startDate").value;
+        let checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+        let freeText = document.getElementById("freeText").value;
+
+        let lineBreak = "%0D%0A";
+        var msgBody = "Sähköposti: " + email + lineBreak;
+        msgBody += "Puhelin: " + phone + lineBreak;
+        msgBody += "Syntymäpäivä: " + birthday + lineBreak;
+        msgBody += "Toivottu aloitus pvm: " + startDate + lineBreak;
+
+        var checkboxValues = [];
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxValues[i] = checkboxes[i].value;
+        }
+        
+        if (checkboxes.length > 0) {
+            msgBody += "Hoitopäivät: " + checkboxValues.join(", ") + lineBreak;
+        }
+        if (freeText != "") {
+            msgBody += "Vapaa teksti: " + freeText;
+        }
+        
+        window.location = 'mailto:omenapuu.web@gmail.com?subject=Päiväkotihakemus&body=' + msgBody;
+    }
 });

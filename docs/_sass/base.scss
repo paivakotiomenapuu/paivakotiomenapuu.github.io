@@ -86,6 +86,30 @@ blockquote .author {
   color: #ffffff;
 }
 
+form {
+  display: flex !important;
+  flex-direction: column;
+}
+
+form .btn {
+  margin: 0.5rem 0;
+}
+
+.form-row {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.form-group {
+  padding: 0.5rem 0;
+}
+
+.form-header img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 575.98px) {
   .page-section {
     padding: 4rem 0 !important;
