@@ -17,8 +17,10 @@ window.addEventListener('DOMContentLoaded', event => {
         }
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
+            document.getElementById("logo").src = "assets/img/logo-white.png";
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
+            document.getElementById("logo").src = "assets/img/logo-color.png";
         }
 
     };
