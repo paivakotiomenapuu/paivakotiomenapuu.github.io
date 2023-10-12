@@ -148,6 +148,12 @@ form .btn {
   }
 }
 
+@media (max-width: 991.98px) {
+  #logo {
+    content: url("/assets/img/logo-color.png") !important;
+  }
+}
+
 @media (min-width: 1200px) {
   .group-text {
     padding: 4rem 4rem !important;
