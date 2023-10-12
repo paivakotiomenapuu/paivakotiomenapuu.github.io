@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', event => {
         let phone = document.getElementById("phone").value;
         let birthday = document.getElementById("birthday").value;
         let startDate = document.getElementById("startDate").value;
-        let checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+        let amount = document.getElementById("amount").value;
         let freeText = document.getElementById("freeText").value;
 
         let lineBreak = "%0D%0A";
@@ -71,19 +71,12 @@ window.addEventListener('DOMContentLoaded', event => {
         msgBody += "Puhelin: " + phone + lineBreak;
         msgBody += "Syntymäpäivä: " + birthday + lineBreak;
         msgBody += "Toivottu aloitus pvm: " + startDate + lineBreak;
+        msgBody += "Päivittäinen hoitoaika: " + amount
 
-        var checkboxValues = [];
-        for (var i = 0; i < checkboxes.length; i++) {
-            checkboxValues[i] = checkboxes[i].value;
-        }
-        
-        if (checkboxes.length > 0) {
-            msgBody += "Hoitopäivät: " + checkboxValues.join(", ") + lineBreak;
-        }
         if (freeText != "") {
-            msgBody += "Vapaa teksti: " + freeText;
+            msgBody += lineBreak + "Lisäinfo: " + freeText;
         }
         
-        window.location = 'mailto:omenapuu.web@gmail.com?subject=Päiväkotihakemus&body=' + msgBody;
+        window.location = 'mailto:pkomenapuu@paivakotiomenapuu.fi?subject=Päiväkotihakemus&body=' + msgBody;
     }
 });
