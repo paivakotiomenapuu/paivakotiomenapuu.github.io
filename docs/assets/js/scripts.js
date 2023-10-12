@@ -54,7 +54,9 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     let form = document.getElementById("application")
-    form.addEventListener("submit", composeMail);
+    if (form) {
+        form.addEventListener("submit", composeMail);
+    }
 
     function composeMail(event) {
         event.preventDefault();
