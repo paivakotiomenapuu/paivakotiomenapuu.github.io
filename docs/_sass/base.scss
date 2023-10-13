@@ -14,14 +14,6 @@ p:last-child {
   margin: 0 !important;
 }
 
-.nav-logo {
-  font-size: xx-large;
-}
-
-.navbar-dark .nav-logo {
-  color: rgba(0, 0, 0, 0.9);;
-}
-
 .overlay-container {
   position: relative;
 }
@@ -112,6 +104,11 @@ form .btn {
 
 .page-section {
   padding: 4rem 0 !important;
+}
+
+#testimonials, #mainNav {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #logo {
