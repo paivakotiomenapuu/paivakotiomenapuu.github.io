@@ -1,6 +1,6 @@
 # Navigation bar titles which are also used in page section titles.
 # If new content is added or ordering is changed, html files need to be modified.
-- title: Omppu
+- title: Meidän Omppu
   link: "#about"
 - title: Arvot
   link: "#values"
