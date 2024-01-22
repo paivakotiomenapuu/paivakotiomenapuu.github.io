@@ -29,10 +29,11 @@ window.addEventListener('DOMContentLoaded', event => {
             navbarCollapsible.classList.remove('navbar-shrink')
             document.getElementById("logo").src = "assets/img/logo-white.png";
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-            document.getElementById("logo").src = "assets/img/logo-color.png";
+            if (!navbarCollapsible.classList.contains('navbar-shrink')) {
+                navbarCollapsible.classList.add('navbar-shrink')
+                document.getElementById("logo").src = "assets/img/logo-color.png";
+            }
         }
-
     };
 
     // Shrink the navbar 
