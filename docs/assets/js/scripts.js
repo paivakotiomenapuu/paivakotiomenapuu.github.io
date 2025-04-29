@@ -8,15 +8,15 @@
 //
 
 window.addEventListener('DOMContentLoaded', event => {
-    
+
     var docWidth = document.documentElement.offsetWidth;
     [].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-        if (el.offsetWidth > docWidth) {
-        console.log(el);
+        document.querySelectorAll('*'),
+        function (el) {
+            if (el.offsetWidth > docWidth) {
+                console.log(el);
+            }
         }
-    }
     );
 
     // Navbar shrink function
@@ -89,7 +89,22 @@ window.addEventListener('DOMContentLoaded', event => {
         if (freeText != "") {
             msgBody += lineBreak + "Lisäinfo: " + freeText;
         }
-        
+
         window.location = 'mailto:pkomenapuu@paivakotiomenapuu.fi?subject=Päiväkotihakemus&body=' + msgBody;
+    }
+
+    // Promo modal
+    var modal = document.getElementById("promo");
+    var close = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+
+    close.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 });
