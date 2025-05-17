@@ -13,5 +13,5 @@ description: >-
 domain: paivakotiomenapuu.github.io
 url: https://paivakotiomenapuu.github.io
 baseurl: ""
-hasPromotion: true
+hasPromotion: false
 promoTitle: "Lasten liikennekaupunki"
